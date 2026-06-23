@@ -9,7 +9,7 @@ class Student:
         self.avg_score = score_value
 
     def show_info(self):
-        print(f"Student card: {stud1.first_name} {stud1.second_name}. Age = {stud1.age} and average score = {stud1.avg_score}")
+        print(f"Student card: {self.first_name} {self.second_name}. Age = {self.age} and average score = {self.avg_score}")
 
 
 
