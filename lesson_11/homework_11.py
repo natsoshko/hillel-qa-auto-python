@@ -8,6 +8,9 @@ def func_sum_array_numbers(s_list):
             sum_ += int(num)
     except ValueError:
         return "Can't do this - not only numbers here!"
+    except Exception as e:
+        print("Some unexpected error happened")
+        print(e)
     return sum_
 
 for item in s_array:
