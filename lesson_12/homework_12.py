@@ -58,6 +58,14 @@ def func_sum_array_numbers(s_list):
         print(e)
     return sum_
 
+def func_sentence_starting_with_some_text(sentences):
+    for sentence in sentences:
+        if sentence.strip().startswith("By the time"):
+            return True
+    return False
+
+
+
 # for item in s_array:
 #     # print(item)
 #     print("sum of elements", item, "=", func_sum_array_numbers(item))
