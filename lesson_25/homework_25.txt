@@ -1,0 +1,49 @@
+=== by XPath:
+== Main page:
+//a[text()='Home']                                          # Home
+//header//a[text()='Home']                                  # Home
+//button[text()='About']                                    # About
+//button[contains(text(), 'Sign')]                          # 'Sign in', 'Sign up' button
+//button[contains(@class, 'btn')]                           # buttons 'Sign in', 'Sign up', About, Contacts
+
+== 'Sign in' button => modal window page:
+//h4[@class='modal-title' and text()='Log in']              # title with text 'Log in'
+//div[contains(@class, 'modal-content')]//h4[contains(@class, 'modal-title') and text()='Log in']   # title with text 'Log in'
+//input[@name='email']                                      # email input field
+//form/input[@name='email']                                 # email input field
+//form//label[text()='Email']/following-sibling::input      # email input field
+//input[@type='password']                                   # password input field
+//form[.//input[@name='email'] and .//input[@name='password']]//button      # 'Forgot password' button
+
+== page when user is logged via 'Guest log i'n':
+//a[@href='/panel/garage']                                  # Header => Garage
+//button[text()='Add car']                                  # 'Add Car' button
+
+=== by CSS:
+== Main page:
+a.btn.header-link.-active                                   # Home link
+.btn-primary                                                # Sign up
+button.hero-descriptor_btn.btn.btn-primary                  # Sign up
+button.btn.btn-outline-white.header_signin                  # Sign in
+#contactsSection .socials a.socials_link                    # social links
+#contactsSection  .socials a.socials_link[href*='t.me']     # telegram icon
+#contactsSection a[href*='t.me']                            # telegram icon
+button.header-link.-guest                                   # Guest log in
+
+== 'Sign in' button => modal window page:
+div.modal-content h4.modal-title                            # title 'Log in'
+input[name='email']                                         # email input field
+form input[name='email']                                    # email input field
+input[type='password']                                      # password input field
+
+== page when user is logged via Guest log in:
+a[href='/panel/garage']                                     # Header => Garage
+nav a.dropdown-item.btn.user-nav_link[href*='garage']       # Header => My Profile => Garage
+a[href='/panel/expenses']                                   # Header => Fuel expenses
+button.btn.btn-primary                                      # 'Add Car' button
+
+== Fuel expenses page (Car is added) - https://qauto2.forstudy.space/panel/expenses => 'Add an expense' button => modal window:
+.btn-primary                                                # 'Add an expense' button
+modal window:
+    div.modal-content input[type='number'][name='liters']   # 'Number of liters' input field
+    .modal-content .modal-title                             # 'Add an expense' title
