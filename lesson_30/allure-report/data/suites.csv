@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","1668","test_registration","tests","2026-09-27","passed","2026-09-27","","test_registration","",""
+"","622","test_registration_name_required","tests","2026-09-27","passed","2026-09-27","","test_registration","",""
+"","637","test_registration_passwords_do_not_match","tests","2026-09-27","passed","2026-09-27","","test_registration","",""
