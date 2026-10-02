@@ -1,7 +1,7 @@
-from pages.garage_page import GaragePage
-from pages.home_page import HomePage
-from pages.login_page import LoginPage
-from pages.registration_page import RegistrationPage
+from pages_variant1.garage_page import GaragePage
+from pages_variant1.home_page import HomePage
+from pages_variant1.login_page import LoginPage
+from pages_variant1.registration_page import RegistrationPage
 from faker import Faker
 import allure
 
