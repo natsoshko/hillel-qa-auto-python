@@ -29,7 +29,7 @@ pipeline {
             steps {
                 sh '''#!/bin/bash
                     source venv/bin/activate
-                    pytest lesson_30/2_variant/tests -v --junitxml=test-results.xml --alluredir=allure-results'''
+                    xvfb-run pytest lesson_30/2_variant/tests -v --junitxml=test-results.xml --alluredir=allure-results'''
             }
         }
     }
